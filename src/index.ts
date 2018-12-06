@@ -1,3 +1,3 @@
-export function sum (a: number, b: number) {
-  return a + b
-}
+import { Game } from './Game/Game'
+
+export { Game }
