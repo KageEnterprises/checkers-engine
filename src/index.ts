@@ -1,3 +1,15 @@
-import { Game } from './Game/Game'
+import {
+  IGameBoard,
+  IGameBoardTile
+} from './Board/Board'
+import {
+  Game,
+  IGameOptions
+} from './Game/Game'
 
-export { Game }
+export {
+  Game,
+  IGameBoard,
+  IGameOptions,
+  IGameBoardTile
+}

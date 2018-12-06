@@ -1,14 +1,23 @@
 /* global beforeEach, describe, expect, it */
-import { Game } from './Game'
+import { Game, IGameOptions } from './Game'
 
 describe('Game', () => {
   describe('initialization', () => {
-    let testGame: Game
+    let game: Game
+    let gameOptions: IGameOptions
 
-    beforeEach(() => { testGame = new Game() })
+    beforeEach(() => {
+      gameOptions = {
+        board: {
+          height: 8,
+          width: 8
+        }
+      }
+      game = new Game(gameOptions)
+    })
 
-    it('should have a true `game` prop', () => {
-      expect(testGame.game).toBe(true)
+    it('should create a list of tiles', () => {
+      expect(game.board.tiles.length).toBe(gameOptions.board.height * gameOptions.board.width)
     })
   })
 })
