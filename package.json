@@ -8,10 +8,10 @@
     "build": "tsc",
     "buildwatch": "tsc -w",
     "prepare": "npm run build",
-    "standard": "standard \"**/*.ts\" \"**/*.tsx\"",
+    "standard": "standard \"**/*.ts\" \"**/*.tsx\" --verbose",
     "standardfix": "standard \"**/*.ts\" \"**/*.tsx\" --fix",
-    "test": "npm run standard && jest",
-    "testwatch": "npm run standard && jest --watchAll"
+    "test": "jest",
+    "testwatch": "jest --watchAll"
   },
   "files": [
     "lib"
