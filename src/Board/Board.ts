@@ -11,8 +11,8 @@ export class BoardMaker {
     const tiles = []
 
     for (let row = 0, displayId = 1; row < height; row++) {
-      for (let col = width; col > 0; col--) {
-        let valid = col % 2 !== row % 2
+      for (let col = width - 1; col >= 0; col--) {
+        let valid = col % 2 === row % 2
         tiles.push(TileMaker.create(row, col, valid ? displayId : false, valid))
         if (valid) displayId++
       }
